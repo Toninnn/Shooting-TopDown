@@ -22,6 +22,9 @@ public class GunController : MonoBehaviour
     public bool buttonActive = true;
     public Button button;
 
+    public Tilemap destructibleTiles;
+    public Destructible destructiblePrefab;
+
 
 
     // Start is called before the first frame update
@@ -76,6 +79,20 @@ public class GunController : MonoBehaviour
     {
 
             Instantiate(bullet, spawnbullet.position, transform.rotation);
+    }
+    
+// Colisao da bala para limpar a parede
+
+    public void ClearDestructible(Vector2 position)
+    {
+        Vector3Int cell = destructibleTiles.WorldToCell(position);
+        TileBase tile = destructibleTiles.GetTile(cell);
+
+        if(tile != null )
+        {
+                Instantiate(destructiblePrefab, position, Quaternion.identity);
+                destructibleTiles.SetTile(cell,null);
+        }
     }
 
 }

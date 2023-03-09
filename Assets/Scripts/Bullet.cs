@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float speed;
+    public float speed = 7f;
+    Animator anim;
+    
 
     // Update is called once per frame
     void Update()
@@ -14,6 +15,14 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         Destroy(gameObject);
     }
+
+    public void Destructible(Vector3 position)
+    {
+         
+    }
+
+
 }

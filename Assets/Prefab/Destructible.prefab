@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1090102912412590815}
   - component: {fileID: 210115624458666105}
   - component: {fileID: 2027101806696595803}
-  - component: {fileID: 3915638783666366337}
+  - component: {fileID: -827510355433058496}
   - component: {fileID: 4661182288977377039}
   m_Layer: 0
   m_Name: Destructible
@@ -113,7 +113,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.93, y: 0.91}
   m_EdgeRadius: 0
---- !u!114 &3915638783666366337
+--- !u!114 &-827510355433058496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,14 +125,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5268ea8fb1b26648b50b8cba3fa5b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 21300000, guid: ae2df628f6d75cd4b90578d3cdf7193b, type: 3}
+  idleSprite: {fileID: 1759729403, guid: 58989bc1d60407243a0bc3f15e2813f0, type: 3}
   animationSprites:
   - {fileID: 1759729403, guid: 58989bc1d60407243a0bc3f15e2813f0, type: 3}
   - {fileID: 106126747, guid: 58989bc1d60407243a0bc3f15e2813f0, type: 3}
   - {fileID: -1428708125, guid: 58989bc1d60407243a0bc3f15e2813f0, type: 3}
   - {fileID: -1993710601, guid: 58989bc1d60407243a0bc3f15e2813f0, type: 3}
   - {fileID: -2109688695, guid: 58989bc1d60407243a0bc3f15e2813f0, type: 3}
-  animationTime: 0.16666667
+  animationTime: 0.25
   loop: 0
   idle: 0
 --- !u!114 &4661182288977377039
@@ -147,3 +147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e1c9bff8f142a4dafe7568193a3aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destructionTime: 1
+  itemSpawnChance: 0.2
+  spawnablaItems:
+  - {fileID: 465576084415286754, guid: 008cc651aca60d743b669d6916f0fe7a, type: 3}
+  - {fileID: 4647591508643678604, guid: 5bee1d6e87e6eb844b6026c9687998ee, type: 3}

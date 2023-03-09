@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
-    [SerializeField] float fireSpeed;
+    public float speed = 5f;
+    public float fireSpeed = 7f;
 
     Vector2 moveInput;
     Animator anim;
@@ -26,7 +25,7 @@ public class PlayerController : MonoBehaviour
         moveInput.x = moveJoystick.Horizontal;
         moveInput.y = moveJoystick.Vertical;
 
-        transform.Translate(moveInput * Time.deltaTime * moveSpeed);
+        transform.Translate(moveInput * Time.deltaTime * speed);
 
         anim.SetBool("isWalk", (Mathf.Abs(moveInput.x) > 0 || Mathf.Abs(moveInput.y) > 0));
 

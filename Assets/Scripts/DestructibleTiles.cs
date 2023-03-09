@@ -15,10 +15,6 @@ public class DestructibleTiles : MonoBehaviour
     public bool loop = true;
     public bool idle = true;
 
-    private void Start()
-    {
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
@@ -56,4 +52,23 @@ public class DestructibleTiles : MonoBehaviour
         }
 
     }
+    public float destructionTime = 1f;
+
+    public float itemSpawnChance = 0.2f;
+    public GameObject[] spawnablaItems;
+
+    private void Start()
+    {
+        Destroy(gameObject, destructionTime);
+    }
+
+    private void OnDestroy()
+    {
+        if( spawnablaItems.Length > 0 && Random.value < itemSpawnChance)
+        {
+            int randomIndex = Random.Range(0, spawnablaItems.Length);
+            Instantiate(spawnablaItems[randomIndex], transform.position, Quaternion.identity);
+    }
+ }
 }
+
