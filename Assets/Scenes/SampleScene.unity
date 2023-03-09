@@ -1161,9 +1161,14 @@ MonoBehaviour:
   animationFrame: 0
   loop: 1
   idle: 1
+<<<<<<< HEAD
   destructionTime: 1
   itemSpawnChance: 0.2
   spawnablaItems: []
+=======
+  itemSpawnChance: 0.2
+  spawnableItenss: []
+>>>>>>> 86511f4e31ae40fac8a67a27ca32211e0a59e605
 --- !u!4 &449413805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6697114119818245862, guid: 3ae3c591f77d18a47970facaddf4856f, type: 3}
@@ -1665,8 +1670,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8ac745af6bab4429b09524fac0f5dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   speed: 5
   fireSpeed: 1
+=======
+  moveSpeed: 2
+  fireSpeed: 0
+>>>>>>> 86511f4e31ae40fac8a67a27ca32211e0a59e605
   moveJoystick: {fileID: 1606342918}
   ainJoystick: {fileID: 1606342918}
   gun: {fileID: 516135709224870806, guid: 7a2e3f2d8d33f4943a7baaa5e7c28812, type: 3}
@@ -4988,18 +4998,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6697114119818245862, guid: 3ae3c591f77d18a47970facaddf4856f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697114119818245865, guid: 3ae3c591f77d18a47970facaddf4856f, type: 3}
-      propertyPath: loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697114119818245865, guid: 3ae3c591f77d18a47970facaddf4856f, type: 3}
-      propertyPath: animationTime
-      value: 0.16666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 6697114119818245865, guid: 3ae3c591f77d18a47970facaddf4856f, type: 3}
-      propertyPath: animationFrame
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

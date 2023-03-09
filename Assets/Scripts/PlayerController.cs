@@ -3,8 +3,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+<<<<<<< HEAD:Assets/Scripts/PlayerController.cs
     public float speed = 5f;
     public float fireSpeed = 7f;
+=======
+    public float moveSpeed;
+    public float fireSpeed;
+>>>>>>> 86511f4e31ae40fac8a67a27ca32211e0a59e605:Assets/Scipts/PlayerController.cs
 
     Vector2 moveInput;
     Animator anim;

@@ -15,6 +15,27 @@ public class DestructibleTiles : MonoBehaviour
     public bool loop = true;
     public bool idle = true;
 
+<<<<<<< HEAD:Assets/Scripts/DestructibleTiles.cs
+=======
+    [Range(0f, 1f)]
+    public float itemSpawnChance = 0.5f;
+    public GameObject[] spawnableItenss;
+
+    private void Start()
+    {
+    }
+
+    private void OnDestroy()
+    {
+        if (spawnableItenss.Length > 0 && Random.value < itemSpawnChance)
+        {
+            int randomIndex = Random.Range(0, spawnableItenss.Length);
+            Instantiate(spawnableItenss[randomIndex], transform.position, Quaternion.identity);
+        }
+    }
+
+
+>>>>>>> 86511f4e31ae40fac8a67a27ca32211e0a59e605:Assets/Scipts/DestructibleTiles.cs
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
